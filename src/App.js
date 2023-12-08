@@ -33,7 +33,8 @@ function reducer(state, action) {
         case 'close':
             return {
                 ...state,
-                account: state.loan === 0 ? 0 : 1
+                account: state.loan === 0 ? 0 : 1,
+                balance: state.loan === 0 ? 0 : state.balance
             }
         default:
             return state;
